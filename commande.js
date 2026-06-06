@@ -70,8 +70,8 @@ function displayOrder(){
       </p>
     `;
 
-    subtotal.textContent = "0£";
-    total.textContent = "0£";
+    subtotal.textContent = "0€";
+    total.textContent = "0€";
     return;
   }
 
@@ -81,14 +81,14 @@ function displayOrder(){
         <strong>${item.name}</strong>
         ${item.size ? `<small style="display:block;color:#7b6a63;margin-top:4px;">Taille : ${item.size}</small>` : ""}
       </div>
-      <span>${item.price}£</span>
+      <span>${item.price}€</span>
     </div>
   `).join("");
 
   const sum = cart.reduce((acc, item) => acc + Number(item.price), 0);
 
-  subtotal.textContent = `${sum}£`;
-  total.textContent = `${sum}£`;
+  subtotal.textContent = `${sum}€`;
+  total.textContent = `${sum}€`;
 }
 
 if(cardNumber){
@@ -141,16 +141,16 @@ function buildReceipt(order){
         <strong>${item.name}</strong>
         <small>Taille : ${item.size || "Standard"}</small>
       </div>
-      <span>${item.price}£</span>
+      <span>${item.price}€</span>
     </div>
   `).join("");
 
-  receiptTotal.textContent = `${order.total}£`;
+  receiptTotal.textContent = `${order.total}€`;
 }
 
 function buildEmailText(order){
   const productsText = order.produits.map(item => {
-    return `- ${item.name} | Taille : ${item.size || "Standard"} | Prix : ${item.price}£`;
+    return `- ${item.name} | Taille : ${item.size || "Standard"} | Prix : ${item.price}€`;
   }).join("%0D%0A");
 
   return `
@@ -161,7 +161,7 @@ Date : ${order.date}%0D%0A
 Adresse : ${order.adresse}%0D%0A
 Paiement : ${order.carte.numeroMasque}%0D%0A%0D%0A
 Produits :%0D%0A${productsText}%0D%0A%0D%0A
-Total payé : ${order.total}£%0D%0A%0D%0A
+Total payé : ${order.total}€%0D%0A%0D%0A
 Email client : ${order.email}%0D%0A
   `;
 }

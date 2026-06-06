@@ -92,7 +92,7 @@ function updateCart(){
   cartCount.textContent = cart.length;
 
   const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
-  cartTotal.textContent = `${total}£`;
+  cartTotal.textContent = `${total}€`;
 
   if(cart.length === 0){
     cartItems.innerHTML = `<p class="empty-cart">Votre panier est vide.</p>`;
@@ -104,7 +104,7 @@ function updateCart(){
       <div>
         <strong>${item.name}</strong>
         <small>Taille : ${item.size}</small>
-        <span>${item.price}£</span>
+        <span>${item.price}€</span>
       </div>
 
       <button class="remove-item" data-index="${index}">
