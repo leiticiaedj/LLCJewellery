@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Connexion — LC Jewellery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+  <div class="announcement-bar">
+    Livraison offerte · Paiement sécurisé · Collection limitée 2026
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a href="index.html" class="logo">LC Jewellery</a>
+
+    <button class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#collections">Collections</a>
+      <a href="products.html">Bijoux</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="commande.html">Contact</a>
+      <a href="contact.html" class="active">Connexion</a>
+    </nav>
+
+    <button class="cart-link" id="openCart">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Panier</span>
+      <strong id="cartCount">0</strong>
+    </button>
+  </header>
+
+  <main class="auth-page">
+
+    <section class="auth-left">
+      <div class="luxury-card">
+        <p class="small-title">Espace privé</p>
+        <h1>Bienvenue dans votre maison de bijoux</h1>
+        <p>
+          Connectez-vous pour suivre vos commandes, sauvegarder vos bijoux favoris
+          et recevoir nos offres privées.
+        </p>
+      </div>
+    </section>
+
+    <section class="auth-right">
+
+      <div class="form-box">
+
+        <div class="tabs">
+          <button class="tab active" id="loginTab">Connexion</button>
+          <button class="tab" id="registerTab">Créer un compte</button>
+        </div>
+
+        <form id="loginForm" class="form active">
+          <h2>Connexion</h2>
+          <p class="form-text">Accédez à votre compte client.</p>
+
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="Votre email" required>
+
+          <label>Mot de passe</label>
+          <div class="password-box">
+            <input type="password" id="loginPassword" placeholder="Votre mot de passe" required>
+            <button type="button" class="show-password">Voir</button>
+          </div>
+
+          <button type="submit" class="main-btn">Se connecter</button>
+
+          <p class="switch-text">
+            Vous n’avez pas de compte ?
+            <span id="goRegister">Créer un compte</span>
+          </p>
+        </form>
+
+        <form id="registerForm" class="form">
+          <h2>Créer un compte</h2>
+          <p class="form-text">Rejoignez notre univers luxe.</p>
+
+          <div class="input-row">
+            <div>
+              <label>Nom</label>
+              <input type="text" id="lastName" placeholder="Votre nom" required>
+            </div>
+
+            <div>
+              <label>Prénom</label>
+              <input type="text" id="firstName" placeholder="Votre prénom" required>
+            </div>
+          </div>
+
+          <label>Email</label>
+          <input type="email" id="registerEmail" placeholder="Votre email" required>
+
+          <label>Téléphone</label>
+          <input type="tel" id="phone" placeholder="+213 000 000 000" required>
+
+          <label>Adresse</label>
+          <input type="text" id="address" placeholder="Votre adresse complète" required>
+
+          <div class="input-row">
+            <div>
+              <label>Ville</label>
+              <input type="text" id="city" placeholder="Votre ville" required>
+            </div>
+
+            <div>
+              <label>Code postal</label>
+              <input type="text" id="zip" placeholder="Code postal" required>
+            </div>
+          </div>
+
+          <label>Mot de passe</label>
+          <div class="password-box">
+            <input type="password" id="registerPassword" placeholder="Créer un mot de passe" required>
+            <button type="button" class="show-password">Voir</button>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" required>
+            J’accepte les conditions générales et la politique de confidentialité.
+          </label>
+
+          <button type="submit" class="main-btn">Créer mon compte</button>
+
+          <p class="switch-text">
+            Déjà un compte ?
+            <span id="goLogin">Se connecter</span>
+          </p>
+        </form>
+
+        <div id="message" class="message"></div>
+
+      </div>
+
+    </section>
+
+  </main>
+  <section class="contact-info">
+
+  <p class="small-title">Nous contacter</p>
+
+  <h2>Notre équipe est à votre écoute</h2>
+
+  <div class="contact-cards">
+
+    <div class="contact-card">
+      <i class="fa-solid fa-phone"></i>
+      <h3>Téléphone</h3>
+      <p>+213 794 08 39 79</p>
+    </div>
+
+    <div class="contact-card">
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Email principal</h3>
+      <p>leicha@fr.com</p>
+    </div>
+
+    <div class="contact-card">
+      <i class="fa-solid fa-gem"></i>
+      <h3>Service LC Jewellery</h3>
+      <p>leitichah@lcjewellery.com</p>
+    </div>
+
+  </div>
+
+</section>
+
+  <script src="contact.js"></script>
+</body>
+</html>
+<footer class="footer">
+    <div class="footer-top">
+      <div>Engagements et garanties</div>
+      <div>Mise à taille offerte</div>
+      <div>Livraison offerte</div>
+      <div>Paiement en 3 fois</div>
+    </div>
+
+    <div class="footer-content">
+
+      <div class="footer-col">
+        <h3>LC Jewellery</h3>
+        <p>
+          Bijoux élégants, intemporels et féminins
+          pour toutes les occasions précieuses.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Showroom ouvert uniquement sur RDV</p>
+        <p>+213 794 08 39 79</p>
+        <p>leitichah@lcjewellery.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Menu</h3>
+        <a href="index.html">Accueil</a>
+        <a href="index.html#collections">Collections</a>
+        <a href="products.html">Bijoux</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="commande.html">Contact</a>
+        <a href="contact.html">Connexion</a>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Newsletter</h3>
+        <p>Recevez nos nouveautés et offres privées.</p>
+
+        <form>
+          <input type="email" placeholder="Votre e-mail" required>
+          <button type="submit">S’inscrire</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 — LC Jewellery. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

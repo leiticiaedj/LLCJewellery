@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LC Jewellery — Maison de bijoux</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <div class="announcement-bar">
+    Livraison offerte · Paiement sécurisé · Collection limitée 2026
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a href="index.html" class="logo">LC Jewellery</a>
+
+    <button class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html"class="active">Accueil</a>
+      <a href="index.html#collections">Collections</a>
+      <a href="products.html">Bijoux</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="commande.html">Contact</a>
+      <a href="contact.html">Connexion</a>
+    </nav>
+
+
+    <button class="cart-link" id="openCart">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Panier</span>
+      <strong id="cartCount">0€</strong>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="op.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">Maison de bijoux raffinés</p>
+        <h1>L’éclat du luxe, la douceur du détail</h1>
+        <p>
+          Découvrez des bijoux élégants, intemporels et féminins,
+          pensés pour illuminer vos plus beaux instants.
+        </p>
+
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-primary">Découvrir les bijoux</a>
+          <a href="#collections" class="btn btn-secondary">Voir les collections</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="signature-section reveal" id="collections">
+      <div class="signature-text">
+        <p class="eyebrow dark">Collection signature</p>
+        <h2>Des bijoux pour chaque moment précieux</h2>
+        <p>
+          Une sélection dorée, raffinée et moderne, inspirée par la féminité,
+          la lumière et le savoir-faire artisanal.
+        </p>
+        <a href="products.html" class="luxury-link">
+          Explorer la collection <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="signature-gallery">
+        <img src="3.jpg" alt="Bijou doré élégant">
+        <img src="2.webp" alt="Bijou de luxe">
+        <img src="1.webp" alt="Collection de bijoux dorés">
+      </div>
+    </section>
+
+    <section class="values-section">
+      <div class="value-card reveal">
+        <i class="fa-solid fa-gem"></i>
+        <h3>Finitions luxueuses</h3>
+        <p>Chaque détail est travaillé pour offrir une allure élégante et durable.</p>
+      </div>
+
+      <div class="value-card reveal">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Livraison offerte</h3>
+        <p>Une expérience d’achat fluide, soignée et pensée pour vous.</p>
+      </div>
+
+      <div class="value-card reveal">
+        <i class="fa-solid fa-shield-heart"></i>
+        <h3>Paiement sécurisé</h3>
+        <p>Vos commandes sont protégées avec un processus simple et fiable.</p>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-header reveal">
+        <p class="eyebrow dark">Sélection exclusive</p>
+        <h2>Nos bijoux tendance</h2>
+        <p>
+          Des pièces délicates, lumineuses et faciles à porter
+          au quotidien comme en soirée.
+        </p>
+      </div>
+
+      <div class="products-container">
+
+        <article class="product-card reveal" data-name="Collier Élégance Royale" data-price="7">
+          <span class="badge">BESTSELLER -20%</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+
+          <div class="product-image">
+            <img src="colier royale.jpg" alt="Collier Élégance Royale">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+
+          <div class="product-info">
+            <span class="category">Colliers</span>
+            <h3>Collier Élégance Royale</h3>
+            <div class="price">
+              <span class="new-price">70€</span>
+              <span class="old-price">105€</span>
+            </div>
+            <div class="stars">★★★★★ <span>(124)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-name="Bracelet Luxe" data-price="5">
+          <span class="badge rose">POPULAIRE</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+
+          <div class="product-image">
+            <img src="braclets.jpg" alt="Bracelet Luxe">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+
+          <div class="product-info">
+            <span class="category">Bracelets</span>
+            <h3>Bracelet Luxe</h3>
+            <div class="price">
+              <span class="new-price">5€</span>
+              <span class="old-price">9€</span>
+            </div>
+            <div class="stars">★★★★★ <span>(210)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-name="Bague Diamond" data-price="5">
+          <span class="badge">NOUVEAU</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+
+          <div class="product-image">
+            <img src="diamond.jpg" alt="Bague Diamond">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+
+          <div class="product-info">
+            <span class="category">Bagues</span>
+            <h3>Bague Diamond</h3>
+            <div class="price">
+              <span class="new-price">50€</span>
+              <span class="old-price">90€</span>
+            </div>
+            <div class="stars">★★★★★ <span>(98)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-name="Boucles Luxe" data-price="8">
+          <span class="badge rose">POPULAIRE</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+
+          <div class="product-image">
+            <img src="earings.webp" alt="Boucles Luxe">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+
+          <div class="product-info">
+            <span class="category">Boucles d’oreilles</span>
+            <h3>Boucles Luxe</h3>
+            <div class="price">
+              <span class="new-price">8€</span>
+              <span class="old-price">11€</span>
+            </div>
+            <div class="stars">★★★★★ <span>(210)</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="promo reveal">
+      <div class="promo-box">
+        <p class="eyebrow">Offre privée</p>
+        <h2>Soldes de saison — jusqu’à -(50)%</h2>
+        <p>Profitez de nos offres exclusives sur une sélection de bijoux iconiques.</p>
+        <a href="products.html" class="btn btn-light">Voir les soldes</a>
+      </div>
+    </section>
+
+    <section class="creator-section" id="about-preview">
+      <div class="creator-image reveal">
+        <img src="creatrice.jpg" alt="Bijoux LC Jewellery">
+      </div>
+
+      <div class="creator-content reveal">
+        <p class="eyebrow dark">About Us</p>
+        <h2>Une maison inspirée par la lumière et l’élégance.</h2>
+        <p>
+          <strong>Notre histoire</strong> commence avec une passion pour les bijoux raffinés,
+          délicats et intemporels.
+        </p>
+        <p>
+          <strong>Chaque pièce</strong> est pensée pour sublimer vos instants précieux
+          avec douceur et féminité.
+        </p>
+        <p>
+          <strong>Notre univers</strong> associe simplicité, luxe discret et finitions soignées.
+        </p>
+        <a href="aboutus.html" class="luxury-link">Découvrir notre histoire</a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>Votre panier</h2>
+      <button id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Votre panier est vide.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">0€</strong>
+      </div>
+      <button class="checkout-btn">Commander</button>
+    </div>
+  </aside>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div>Engagements et garanties</div>
+      <div>Mise à taille offerte</div>
+      <div>Livraison offerte</div>
+      <div>Paiement en 3 fois</div>
+    </div>
+
+    <div class="footer-content">
+
+      <div class="footer-col">
+        <h3>LC Jewellery</h3>
+        <p>
+          Bijoux élégants, intemporels et féminins
+          pour toutes les occasions précieuses.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Showroom ouvert uniquement sur RDV</p>
+        <p>+213 794 08 39 79</p>
+        <p>leitichah@lcjewellery.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Menu</h3>
+        <a href="index.html">Accueil</a>
+        <a href="index.html#collections">Collections</a>
+        <a href="products.html">Bijoux</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="commande.html">Contact</a>
+        <a href="contact.html">Connexion</a>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Newsletter</h3>
+        <p>Recevez nos nouveautés et offres privées.</p>
+
+        <form>
+          <input type="email" placeholder="Votre e-mail" required>
+          <button type="submit">S’inscrire</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 — LC Jewellery. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

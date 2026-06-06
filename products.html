@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bijoux — LC Jewellery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="products.css" />
+</head>
+
+<body>
+
+  <div class="announcement-bar">
+    Livraison offerte · Paiement sécurisé · Collection limitée 2026
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a href="index.html" class="logo">LC Jewellery</a>
+
+    <button class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#collections">Collections</a>
+      <a href="products.html" class="active">Bijoux</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="commande.html">Contact</a>
+      <a href="contact.html">Connexion</a>
+    </nav>
+
+    <button class="cart-link" id="openCart">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Panier</span>
+      <strong id="cartCount">0</strong>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="products-hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Collection bijoux</p>
+        <h1>Des pièces pensées pour briller.</h1>
+        <p>Explorez nos colliers, bagues, bracelets et boucles d’oreilles dans un univers raffiné.</p>
+      </div>
+    </section>
+
+    <section class="special-banner reveal">
+      <div class="special-content">
+        <p class="small-title">Nouvelle collection</p>
+        <h2>Summer Collection 2026</h2>
+        <p>Des bijoux lumineux inspirés des couchers de soleil, des plages dorées et de l'élégance estivale.</p>
+        <button class="summer-btn" id="showSummerProducts">Découvrir</button>
+      </div>
+    </section>
+
+    <section class="summer-products" id="summerProducts">
+      <div class="catalog-header reveal">
+        <p class="eyebrow dark">Summer Collection</p>
+        <h2>Nos pièces d’été</h2>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card reveal" data-category="summer" data-name="Collier Soleil d’Or" data-price="14">
+          <span class="badge">SUMMER</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="collier soleil en or.jpg" alt="Collier Soleil d’Or">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Summer Collection</span>
+            <h3>Collier Soleil d’Or</h3>
+            <div class="sizes"><button>38 cm</button><button>42 cm</button><button>45 cm</button></div>
+            <div class="price"><span class="new-price">14€</span></div>
+            <div class="stars">★★★★★ <span>(32)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="summer" data-name="Bracelet Sunset Pearl" data-price="12">
+          <span class="badge">SUMMER</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="braclet sunset pearl.jpg" alt="Bracelet Sunset Pearl">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Summer Collection</span>
+            <h3>Bracelet Sunset Pearl</h3>
+            <div class="sizes"><button>S</button><button>M</button><button>L</button></div>
+            <div class="price"><span class="new-price">10€</span></div>
+            <div class="stars">★★★★★ <span>(41)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="summer" data-name="Boucles Golden Sea" data-price="13">
+          <span class="badge">SUMMER</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="boucles sea.jpg" alt="Boucles Golden Sea">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Summer Collection</span>
+            <h3>Boucles Golden Sea</h3>
+            <div class="sizes"><button>Unique</button></div>
+            <div class="price"><span class="new-price">13€</span></div>
+            <div class="stars">★★★★★ <span>(27)</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="catalog-section">
+
+      <div class="catalog-header reveal">
+        <p class="eyebrow dark">Catalogue</p>
+        <h2>Nos créations signature</h2>
+      </div>
+
+      <div class="search-box reveal">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Rechercher un bijou...">
+      </div>
+
+      <div class="filters reveal">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="colliers">Colliers</button>
+        <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+        <button class="filter-btn" data-filter="bagues">Bagues</button>
+        <button class="filter-btn" data-filter="boucles">Boucles d’oreilles</button>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- 4 COLLIERS -->
+
+        <article class="product-card reveal" data-category="colliers" data-name="Collier Élégance Royale" data-price="7">
+          <span class="badge">BESTSELLER -20%</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="colier royale.jpg" alt="Collier Élégance Royale">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Colliers</span>
+            <h3>Collier Élégance Royale</h3>
+            <div class="sizes"><button>38 cm</button><button>42 cm</button><button>45 cm</button></div>
+            <div class="price"><span class="new-price">70€</span><span class="old-price">105€</span></div>
+            <div class="stars">★★★★★ <span>(124)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="colliers" data-name="Collier Soleil" data-price="9">
+          <span class="badge rose">NOUVEAU</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="collier soleil en or.jpg" alt="Collier Soleil">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Colliers</span>
+            <h3>Collier Soleil</h3>
+            <div class="sizes"><button>38 cm</button><button>42 cm</button><button>45 cm</button></div>
+            <div class="price"><span class="new-price">11€</span></div>
+            <div class="stars">★★★★★ <span>(87)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="colliers" data-name="Collier Perle Douce" data-price="12">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="collier perle d'eau.jpg" alt="Collier Perle Douce">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Colliers</span>
+            <h3>Collier Perle Douce</h3>
+            <div class="sizes"><button>40 cm</button><button>45 cm</button><button>50 cm</button></div>
+            <div class="price"><span class="new-price">12€</span></div>
+            <div class="stars">★★★★★ <span>(65)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="colliers" data-name="Collier Stylé" data-price="11">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="collier stylé.jpg" alt="Collier Stylé">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Colliers</span>
+            <h3>Collier Stylé</h3>
+            <div class="sizes"><button>38 cm</button><button>42 cm</button><button>46 cm</button></div>
+            <div class="price"><span class="new-price">9€</span></div>
+            <div class="stars">★★★★★ <span>(52)</span></div>
+          </div>
+        </article>
+
+        <!-- 4 BRACELETS -->
+
+        <article class="product-card reveal" data-category="bracelets" data-name="Bracelet Luxe" data-price="5">
+          <span class="badge rose">POPULAIRE</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="braclets.jpg" alt="Bracelet Luxe">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Bracelets</span>
+            <h3>Bracelet Luxe</h3>
+            <div class="sizes"><button>S</button><button>M</button><button>L</button></div>
+            <div class="price"><span class="new-price">5€</span><span class="old-price">9€</span></div>
+            <div class="stars">★★★★★ <span>(210)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="bracelets" data-name="Bracelet Perle" data-price="6">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="perla.jpg" alt="Bracelet Perle">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Bracelets</span>
+            <h3>Bracelet Perle</h3>
+            <div class="sizes"><button>S</button><button>M</button><button>L</button></div>
+            <div class="price"><span class="new-price">9€</span></div>
+            <div class="stars">★★★★★ <span>(71)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="bracelets" data-name="Bracelet Doré" data-price="8">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="simplee.jpg" alt="Bracelet Doré">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Bracelets</span>
+            <h3>Bracelet Doré</h3>
+            <div class="sizes"><button>S</button><button>M</button><button>L</button></div>
+            <div class="price"><span class="new-price">8€</span></div>
+            <div class="stars">★★★★★ <span>(96)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="bracelets" data-name="Bracelet Simple" data-price="10">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="braclet dore simple.jpg" alt="Bracelet Simple ">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Bracelets</span>
+            <h3>Bracelet Simple</h3>
+            <div class="sizes"><button>S</button><button>M</button><button>L</button></div>
+            <div class="price"><span class="new-price">10€</span></div>
+            <div class="stars">★★★★★ <span>(44)</span></div>
+          </div>
+        </article>
+
+        <!-- 4 BAGUES -->
+
+        <article class="product-card reveal" data-category="bagues" data-name="Bague Diamond" data-price="5">
+          <span class="badge">NOUVEAU</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="diamond.jpg" alt="Bague Diamond">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Bagues</span>
+            <h3>Bague Diamond</h3>
+            <div class="sizes"><button>50</button><button>53</button><button>56</button><button>60</button></div>
+            <div class="price"><span class="new-price">50€</span><span class="old-price">90€</span></div>
+            <div class="stars">★★★★★ <span>(98)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="bagues" data-name="Bague Étoile" data-price="7">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="bague etoile.jpg" alt="Bague Étoile">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Bagues</span>
+            <h3>Bague Étoile</h3>
+            <div class="sizes"><button>50</button><button>53</button><button>56</button><button>60</button></div>
+            <div class="price"><span class="new-price">7€</span></div>
+            <div class="stars">★★★★★ <span>(76)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="bagues" data-name="Bague Perle" data-price="8">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="bague perle.jpg" alt="Bague Perle">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Bagues</span>
+            <h3>Bague Perle</h3>
+            <div class="sizes"><button>50</button><button>53</button><button>56</button><button>60</button></div>
+            <div class="price"><span class="new-price">8€</span></div>
+            <div class="stars">★★★★★ <span>(58)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="bagues" data-name="Bagues Exclusives" data-price="9">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="bagues exclusives.jpg" alt="Bagues Exclusives">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Bagues</span>
+            <h3>Bague Exclusives</h3>
+            <div class="sizes"><button>50</button><button>53</button><button>56</button><button>60</button></div>
+            <div class="price"><span class="new-price">9€</span></div>
+            <div class="stars">★★★★★ <span>(80)</span></div>
+          </div>
+        </article>
+
+        <!-- 4 BOUCLES -->
+
+        <article class="product-card reveal" data-category="boucles" data-name="boucles Luxe" data-price="8">
+          <span class="badge rose">POPULAIRE</span>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="boucles doockbocker.jpg" alt="boucles Luxe">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Boucles d’oreilles</span>
+            <h3>boucles Luxe</h3>
+            <div class="sizes"><button>Unique</button></div>
+            <div class="price"><span class="new-price">8€</span><span class="old-price">11€</span></div>
+            <div class="stars">★★★★★ <span>(210)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="boucles" data-name="Boucles Perla" data-price="9">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="boucles perla.jpg" alt="Boucles Perla">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Boucles d’oreilles</span>
+            <h3>Boucles Perla</h3>
+            <div class="sizes"><button>Unique</button></div>
+            <div class="price"><span class="new-price">9€</span></div>
+            <div class="stars">★★★★★ <span>(62)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="boucles" data-name="Boucles Soleil" data-price="10">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="boucles soleil.jpg" alt="Boucles Soleil">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Boucles d’oreilles</span>
+            <h3>Boucles Soleil</h3>
+            <div class="sizes"><button>Unique</button></div>
+            <div class="price"><span class="new-price">10€</span></div>
+            <div class="stars">★★★★★ <span>(45)</span></div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="boucles" data-name="Boucles Simple" data-price="11">
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image">
+            <img src="boucles.jpg" alt="Boucles Simple">
+            <button class="cart-btn">Ajouter au panier</button>
+          </div>
+          <div class="product-info">
+            <span class="category">Boucles d’oreilles</span>
+            <h3>Boucles Simple</h3>
+            <div class="sizes"><button>Unique</button></div>
+            <div class="price"><span class="new-price">11€</span></div>
+            <div class="stars">★★★★★ <span>(39)</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>Votre panier</h2>
+      <button id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Votre panier est vide.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">0€</strong>
+      </div>
+      <button class="checkout-btn">Commander</button>
+    </div>
+  </aside>
+  <section class="unique-section reveal">
+
+  <div class="catalog-header">
+    <p class="eyebrow dark">Collection Exclusive</p>
+    <h2>Pièces Uniques</h2>
+  </div>
+
+  <div class="unique-grid">
+
+    <article class="unique-card">
+      <img src="bulgari.jpg" alt="Montre Bulgari">
+
+      <div class="unique-content">
+        <span>Édition Limitée</span>
+        <h3>Montre Bulgari</h3>
+        <p>
+          Une montre raffinée inspirée du luxe intemporel.
+        </p>
+        <strong>35€</strong>
+      </div>
+    </article>
+
+    <article class="unique-card">
+      <img src="chaine de ventre.jpg" alt="Chaîne de Ventre">
+
+      <div class="unique-content">
+        <span>Best Seller</span>
+        <h3>Chaîne de Ventre Gold</h3>
+        <p>
+          Une pièce délicate pour sublimer vos tenues estivales.
+        </p>
+        <strong>18€</strong>
+      </div>
+    </article>
+
+    <article class="unique-card">
+      <img src="retroo.jpg" alt="Retro Bangles">
+
+      <div class="unique-content">
+        <span>Nouvel Arrivage</span>
+        <h3>Retro Bangles</h3>
+        <p>
+          Bracelets inspirés du style vintage revisité.
+        </p>
+        <strong>11€</strong>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+  <section class="coming-soon reveal">
+
+  <p class="small-title">Nouvelle collection</p>
+
+  <h2>Arrivage exclusif bientôt disponible</h2>
+
+  <p>
+    Une nouvelle collection LC Jewellery sera dévoilée très prochainement.
+    Préparez-vous à découvrir nos créations les plus raffinées.
+  </p>
+
+  <div class="countdown">
+
+    <div class="time-box">
+      <span id="days">00</span>
+      <small>Jours</small>
+    </div>
+
+    <div class="time-box">
+      <span id="hours">00</span>
+      <small>Heures</small>
+    </div>
+
+    <div class="time-box">
+      <span id="minutes">00</span>
+      <small>Minutes</small>
+    </div>
+
+    <div class="time-box">
+      <span id="seconds">00</span>
+      <small>Secondes</small>
+    </div>
+
+  </div>
+
+</section>
+<section class="vip-offer reveal">
+  <div class="vip-offer-content">
+    <p class="small-title">Offre privée</p>
+    <h2>Inscris-toi et gagne un cadeau exclusif</h2>
+    <p>
+      Crée ton compte LC Jewellery et reçois une surprise offerte lors de ta première commande.
+    </p>
+
+    <a href="contact.html" class="vip-btn">
+      Créer mon compte
+    </a>
+  </div>
+</section>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <script src="products.js"></script>
+</body>
+</html>
+<footer class="footer">
+    <div class="footer-top">
+      <div>Engagements et garanties</div>
+      <div>Mise à taille offerte</div>
+      <div>Livraison offerte</div>
+      <div>Paiement en 3 fois</div>
+    </div>
+
+    <div class="footer-content">
+
+      <div class="footer-col">
+        <h3>LC Jewellery</h3>
+        <p>
+          Bijoux élégants, intemporels et féminins
+          pour toutes les occasions précieuses.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Showroom ouvert uniquement sur RDV</p>
+        <p>+213 794 08 39 79</p>
+        <p>leitichah@lcjewellery.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Menu</h3>
+        <a href="index.html">Accueil</a>
+        <a href="index.html#collections">Collections</a>
+        <a href="products.html">Bijoux</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="commande.html">Contact</a>
+        <a href="contact.html">Connexion</a>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Newsletter</h3>
+        <p>Recevez nos nouveautés et offres privées.</p>
+
+        <form>
+          <input type="email" placeholder="Votre e-mail" required>
+          <button type="submit">S’inscrire</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 — LC Jewellery. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
